@@ -1,1 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Ronnel Caingat | Data Entry Specialist</title>
+
+    <meta name="description" content="Ronnel Caingat - Beginner Data Entry Specialist providing accurate, organized, and reliable data entry and virtual support.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 7%;
+            background: linear-gradient(135deg, #eef4ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 30px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 19px;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            background: white;
+        }
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+            color: #4b5563;
+        }
+
+        .skills-grid,
+        .services-grid,
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .card p {
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+        .skill {
+            text-align: center;
+        }
+
+        .skill h3 {
+            color: #2563eb;
+        }
+
+        .project-number {
+            font-size: 13px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .tools {
+            background: #ffffff;
+        }
+
+        .tools-list {
+            max-width: 800px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .tool {
+            padding: 12px 18px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .why {
+            background: #eef4ff;
+        }
+
+        .why-list {
+            max-width: 800px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .why-item {
+            background: white;
+            padding: 18px 22px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: #111827;
+            color: white;
+            padding: 45px 30px;
+            border-radius: 16px;
+        }
+
+        .contact-box h2 {
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        .contact-box p {
+            color: #d1d5db;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .skills-grid,
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 70px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Ronnel Caingat</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="tag">BEGINNER DATA ENTRY SPECIALIST</div>
+
+            <h1>
+                Accurate Data.<br>
+                <span>Organized Work.</span>
+            </h1>
+
+            <p>
+                I provide reliable data entry, spreadsheet management,
+                data organization, web research, and document support
+                for businesses and individuals.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Reliable support with attention to detail.</p>
+        </div>
+
+        <div class="about">
+            <p>
+                Hi, I'm Ronnel Caingat, a beginner Data Entry Specialist
+                focused on accuracy, organization, and dependable work.
+                I am building my professional experience by creating
+                practical data-entry projects and developing strong
+                spreadsheet and administrative skills.
+            </p>
+
+            <br>
+
+            <p>
+                I understand that accurate information and organized files
+                are important to every business. My goal is to provide
+                careful, consistent, and professional support while
+                following client instructions closely.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <div class="section-title">
+            <h2>Skills</h2>
+            <p>Core skills I am developing and applying.</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="card skill">
+                <h3>Data Entry</h3>
+                <p>Accurate input, formatting, and organization of information.</p>
+            </div>
+
+            <div class="card skill">
+                <h3>Spreadsheet Management</h3>
+                <p>Creating and organizing structured Excel and spreadsheet data.</p>
+            </div>
+
+            <div class="card skill">
+                <h3>Data Organization</h3>
+                <p>Sorting, arranging, and maintaining clean information.</p>
+            </div>
+
+            <div class="card skill">
+                <h3>Web Research</h3>
+                <p>Finding and organizing information from reliable online sources.</p>
+            </div>
+
+            <div class="card skill">
+                <h3>Data Cleaning</h3>
+                <p>Identifying duplicates, errors, and inconsistent formatting.</p>
+            </div>
+
+            <div class="card skill">
+                <h3>Attention to Detail</h3>
+                <p>Careful review of information to reduce mistakes.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="section-title">
+            <h2>Services</h2>
+            <p>Simple and reliable administrative support.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="card">
+                <h3>Data Entry</h3>
+                <p>
+                    Entering information into spreadsheets,
+                    databases, documents, and online systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>PDF to Excel</h3>
+                <p>
+                    Transferring information from PDF documents
+                    into organized spreadsheet formats.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Copy & Paste Tasks</h3>
+                <p>
+                    Accurate transfer and organization of information
+                    between documents and platforms.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Research</h3>
+                <p>
+                    Collecting requested information and organizing
+                    research results into a clear format.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Data Cleaning</h3>
+                <p>
+                    Organizing spreadsheet information and identifying
+                    duplicates or inconsistent entries.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>File Organization</h3>
+                <p>
+                    Organizing digital files, folders, documents,
+                    and naming structures.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="section-title">
+            <h2>Sample Projects</h2>
+            <p>Practice projects demonstrating my data-entry workflow.</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="card">
+                <div class="project-number">PROJECT 01</div>
+                <h3>Excel Data Entry</h3>
+                <p>
+                    Organized sample information into a clean,
+                    structured spreadsheet with consistent formatting.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="project-number">PROJECT 02</div>
+                <h3>PDF to Spreadsheet</h3>
+                <p>
+                    Transferred sample information from a document
+                    into a structured spreadsheet format.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="project-number">PROJECT 03</div>
+                <h3>Web Research</h3>
+                <p>
+                    Collected sample business information and organized
+                    the results into a simple research spreadsheet.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="project-number">PROJECT 04</div>
+                <h3>Data Cleaning</h3>
+                <p>
+                    Practiced identifying duplicate entries and
+                    improving spreadsheet consistency.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="project-number">PROJECT 05</div>
+                <h3>File Organization</h3>
+                <p>
+                    Created a sample folder structure demonstrating
+                    organized digital file management.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="project-number">PROJECT 06</div>
+                <h3>Document Formatting</h3>
+                <p>
+                    Practiced converting unorganized information
+                    into a clean and readable document.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="tools">
+        <div class="section-title">
+            <h2>Tools</h2>
+            <p>Tools I use or am developing experience with.</p>
+        </div>
+
+        <div class="tools-list">
+            <div class="tool">Microsoft Excel</div>
+            <div class="tool">Google Sheets</div>
+            <div class="tool">Microsoft Word</div>
+            <div class="tool">Google Docs</div>
+            <div class="tool">Google Drive</div>
+            <div class="tool">PDF Documents</div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section class="why">
+        <div class="section-title">
+            <h2>Why Work With Me</h2>
+            <p>Professional qualities I bring to every task.</p>
+        </div>
+
+        <div class="why-list">
+
+            <div class="why-item">
+                <strong>✓ Attention to Detail</strong><br>
+                I carefully review information and follow instructions.
+            </div>
+
+            <div class="why-item">
+                <strong>✓ Reliable Communication</strong><br>
+                I keep communication clear and professional.
+            </div>
+
+            <div class="why-item">
+                <strong>✓ Organized Workflow</strong><br>
+                I keep files, information, and tasks structured.
+            </div>
+
+            <div class="why-item">
+                <strong>✓ Willing to Learn</strong><br>
+                I continuously improve my skills and adapt to new tools.
+            </div>
+
+            <div class="why-item">
+                <strong>✓ Responsible Work Ethic</strong><br>
+                I take deadlines, instructions, and client requirements seriously.
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="contact-box">
+
+            <h2>Let's Work Together</h2>
+
+            <p>
+                Need help with data entry, spreadsheets, research,
+                or document organization? I'd be happy to discuss your project.
+            </p>
+
+            <a
+                href="mailto:ronnelcaingat89@gmail.com"
+                class="btn primary">
+                Contact Me
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Ronnel Caingat | Beginner Data Entry Specialist
+    </footer>
+
+</body>
+</html>
