@@ -2,623 +2,334 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ronnel Caingat | Data Entry Specialist</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Ronnel Caingat - Data Entry Specialist providing accurate, organized, and reliable data entry and virtual support.">
+    <meta name="description"
+          content="Ronnel Caingat - AI Visual Creator, Video Editor and Data Entry Specialist.">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Ronnel Caingat | AI Visual Creator & Data Entry</title>
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
-            line-height: 1.6;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #111827;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #374151;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: #2563eb;
-        }
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            padding: 80px 7%;
-            background: linear-gradient(135deg, #eef4ff, #ffffff);
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 30px;
-            background: #dbeafe;
-            color: #1d4ed8;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 7vw, 72px);
-            line-height: 1.05;
-            color: #111827;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero p {
-            max-width: 700px;
-            font-size: 19px;
-            color: #4b5563;
-            margin-bottom: 30px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 23px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .primary {
-            background: #2563eb;
-            color: white;
-        }
-
-        .secondary {
-            border: 1px solid #2563eb;
-            color: #2563eb;
-            background: white;
-        }
-
-        section {
-            padding: 80px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 36px;
-            color: #111827;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #6b7280;
-        }
-
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-            color: #4b5563;
-        }
-
-        .skills-grid,
-        .services-grid,
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 14px;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: #111827;
-        }
-
-        .card p {
-            color: #6b7280;
-            font-size: 15px;
-        }
-
-        .skill {
-            text-align: center;
-        }
-
-        .skill h3 {
-            color: #2563eb;
-        }
-
-        .project-number {
-            font-size: 13px;
-            font-weight: bold;
-            color: #2563eb;
-            margin-bottom: 10px;
-        }
-
-        .tools {
-            background: #ffffff;
-        }
-
-        .tools-list {
-            max-width: 800px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .tool {
-            padding: 12px 18px;
-            background: #f3f4f6;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        .why {
-            background: #eef4ff;
-        }
-
-        .why-list {
-            max-width: 800px;
-            margin: auto;
-            display: grid;
-            gap: 15px;
-        }
-
-        .why-item {
-            background: white;
-            padding: 18px 22px;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-box {
-            max-width: 700px;
-            margin: auto;
-            background: #111827;
-            color: white;
-            padding: 45px 30px;
-            border-radius: 16px;
-        }
-
-        .contact-box h2 {
-            margin-bottom: 15px;
-            font-size: 32px;
-        }
-
-        .contact-box p {
-            color: #d1d5db;
-            margin-bottom: 25px;
-        }
-
-        footer {
-            background: #111827;
-            color: #9ca3af;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 800px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .skills-grid,
-            .services-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                min-height: auto;
-                padding: 70px 7%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Ronnel Caingat</div>
+<div class="portfolio">
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- ================= SIDEBAR ================= -->
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-content">
+    <aside class="sidebar">
 
-            <div class="tag">DATA ENTRY SPECIALIST</div>
+        <div class="profile">
 
-            <h1>
-                Accurate Data.<br>
-                <span>Organized Work.</span>
-            </h1>
+            <div class="profile-photo">
+                RC
+            </div>
 
-            <p>
-                I provide reliable data entry, spreadsheet management,
-                data organization, web research, and document support
-                for businesses and individuals.
-            </p>
+            <h2>Ronnel Caingat</h2>
 
-            <div class="buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+            <p class="username">@ronnelcai</p>
+
+            <div class="status">
+                <span></span> Available for work
             </div>
 
         </div>
-    </section>
 
-    <!-- About -->
-    <section id="about">
-        <div class="section-title">
-            <h2>About Me</h2>
-            <p>Reliable support with attention to detail.</p>
-        </div>
 
-        <div class="about">
-            <p>
-                Hi, I'm Ronnel Caingat, a beginner Data Entry Specialist
-                focused on accuracy, organization, and dependable work.
-                I am building my professional experience by creating
-                practical data-entry projects and developing strong
-                spreadsheet and administrative skills.
-            </p>
+        <nav class="navigation">
 
-            <br>
-
-            <p>
-                I understand that accurate information and organized files
-                are important to every business. My goal is to provide
-                careful, consistent, and professional support while
-                following client instructions closely.
-            </p>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-        <div class="section-title">
-            <h2>Skills</h2>
-            <p>Core skills I am developing and applying.</p>
-        </div>
-
-        <div class="skills-grid">
-
-            <div class="card skill">
-                <h3>Data Entry</h3>
-                <p>Accurate input, formatting, and organization of information.</p>
-            </div>
-
-            <div class="card skill">
-                <h3>Spreadsheet Management</h3>
-                <p>Creating and organizing structured Excel and spreadsheet data.</p>
-            </div>
-
-            <div class="card skill">
-                <h3>Data Organization</h3>
-                <p>Sorting, arranging, and maintaining clean information.</p>
-            </div>
-
-            <div class="card skill">
-                <h3>Web Research</h3>
-                <p>Finding and organizing information from reliable online sources.</p>
-            </div>
-
-            <div class="card skill">
-                <h3>Data Cleaning</h3>
-                <p>Identifying duplicates, errors, and inconsistent formatting.</p>
-            </div>
-
-            <div class="card skill">
-                <h3>Attention to Detail</h3>
-                <p>Careful review of information to reduce mistakes.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-        <div class="section-title">
-            <h2>Services</h2>
-            <p>Simple and reliable administrative support.</p>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="card">
-                <h3>Data Entry</h3>
-                <p>
-                    Entering information into spreadsheets,
-                    databases, documents, and online systems.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>PDF to Excel</h3>
-                <p>
-                    Transferring information from PDF documents
-                    into organized spreadsheet formats.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Copy & Paste Tasks</h3>
-                <p>
-                    Accurate transfer and organization of information
-                    between documents and platforms.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Web Research</h3>
-                <p>
-                    Collecting requested information and organizing
-                    research results into a clear format.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Data Cleaning</h3>
-                <p>
-                    Organizing spreadsheet information and identifying
-                    duplicates or inconsistent entries.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>File Organization</h3>
-                <p>
-                    Organizing digital files, folders, documents,
-                    and naming structures.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Projects -->
-<section id="projects">
-    <div class="section-title">
-        <h2>Practice Portfolio Projects</h2>
-        <p>Sample projects created to demonstrate my data entry skills and workflow.</p>
-    </div>
-
-    <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <div class="card">
-            <div class="project-number">PROJECT 01</div>
-            <h3>Excel Data Entry</h3>
-
-            <p>
-                Organized customer and order information into a clean,
-                structured spreadsheet with consistent formatting and
-                accurate data entry.
-            </p>
-
-            <br>
-
-            <a
-                href="Sample_Project_01_Excel_Data_Entry.xlsx"
-                class="btn primary"
-                target="_blank">
-                View Project
-            </a>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="card">
-            <div class="project-number">PROJECT 02</div>
-            <h3>Web Research & Data Collection</h3>
-
-            <p>
-                Collected sample business information and organized
-                research results into a structured spreadsheet for
-                easy review.
-            </p>
-
-            <br>
-
-            <a
-                href="Sample_Project_02_Web_Research.xlsx"
-                class="btn primary"
-                target="_blank">
-                View Project
-            </a>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card">
-            <div class="project-number">PROJECT 03</div>
-            <h3>Data Cleaning & Organization</h3>
-
-            <p>
-                Identified duplicate records, inconsistent formatting,
-                and data errors, then organized the information into
-                a cleaner spreadsheet.
-            </p>
-
-            <br>
-
-            <a
-                href="Sample_Project_03_Data_Cleaning.xlsx"
-                class="btn primary"
-                target="_blank">
-                View Project
-            </a>
-        </div>
-
-    </div>
-
-    <p style="text-align:center; margin-top:30px; color:#6b7280; font-size:14px;">
-        These are practice portfolio projects created using fictional data.
-    </p>
-</section>
-
-    <!-- Tools -->
-    <section class="tools">
-        <div class="section-title">
-            <h2>Tools</h2>
-            <p>Tools I use or am developing experience with.</p>
-        </div>
-
-        <div class="tools-list">
-            <div class="tool">Microsoft Excel</div>
-            <div class="tool">Google Sheets</div>
-            <div class="tool">Microsoft Word</div>
-            <div class="tool">Google Docs</div>
-            <div class="tool">Google Drive</div>
-            <div class="tool">PDF Documents</div>
-        </div>
-    </section>
-
-    <!-- Why Work With Me -->
-    <section class="why">
-        <div class="section-title">
-            <h2>Why Work With Me</h2>
-            <p>Professional qualities I bring to every task.</p>
-        </div>
-
-        <div class="why-list">
-
-            <div class="why-item">
-                <strong>✓ Attention to Detail</strong><br>
-                I carefully review information and follow instructions.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Reliable Communication</strong><br>
-                I keep communication clear and professional.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Organized Workflow</strong><br>
-                I keep files, information, and tasks structured.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Willing to Learn</strong><br>
-                I continuously improve my skills and adapt to new tools.
-            </div>
-
-            <div class="why-item">
-                <strong>✓ Responsible Work Ethic</strong><br>
-                I take deadlines, instructions, and client requirements seriously.
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <div class="contact-box">
-
-            <h2>Let's Work Together</h2>
-
-            <p>
-                Need help with data entry, spreadsheets, research,
-                or document organization? I'd be happy to discuss your project.
-            </p>
-
-            <a
-                href="mailto:ronnelcaingat89@gmail.com"
-                class="btn primary">
-                Contact Me
+            <a href="#home" class="active">
+                <span>⌂</span>
+                Home
             </a>
 
+            <a href="#projects">
+                <span>▣</span>
+                Projects
+            </a>
+
+            <a href="#skills">
+                <span>✦</span>
+                Skills
+            </a>
+
+            <a href="#services">
+                <span>◆</span>
+                Services
+            </a>
+
+            <a href="#contact">
+                <span>✉</span>
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <p>Based in Philippines</p>
+
+            <div class="socials">
+
+                <a href="https://github.com/"
+                   target="_blank"
+                   aria-label="GitHub">
+                    GH
+                </a>
+
+                <a href="#contact"
+                   aria-label="Email">
+                    @
+                </a>
+
+            </div>
+
+            <small>© 2026 Ronnel Caingat</small>
+
         </div>
 
-    </section>
+    </aside>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Ronnel Caingat | Data Entry Specialist
-    </footer>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <span class="top-label">PERSONAL PORTFOLIO</span>
+            </div>
+
+            <a href="#contact" class="contact-button">
+                Let's Work Together →
+            </a>
+
+        </header>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <div class="availability">
+                    AVAILABLE FOR FREELANCE PROJECTS
+                </div>
+
+
+                <h1>
+                    Turning Ideas Into
+                    <span>Powerful Work.</span>
+                </h1>
+
+
+                <p class="hero-description">
+
+                    I'm <strong>Ronnel Caingat</strong>, a versatile
+                    freelancer specializing in
+
+                    <strong>AI Visual Creation</strong>,
+                    <strong>Video Editing</strong>, and
+                    <strong>Data Entry</strong>.
+
+                    I create clean visuals, engaging content,
+                    and organized digital work that helps businesses
+                    save time and stand out.
+
+                </p>
+
+
+                <!-- SERVICES -->
+
+                <div class="specialties">
+
+                    <div class="specialty">
+                        <div class="specialty-icon">✦</div>
+
+                        <div>
+                            <h3>AI Visual Creator</h3>
+                            <p>AI Images & Creative Content</p>
+                        </div>
+                    </div>
+
+
+                    <div class="specialty">
+                        <div class="specialty-icon">▶</div>
+
+                        <div>
+                            <h3>Video Editing</h3>
+                            <p>Short-form & Social Videos</p>
+                        </div>
+                    </div>
+
+
+                    <div class="specialty">
+                        <div class="specialty-icon">▤</div>
+
+                        <div>
+                            <h3>Data Entry</h3>
+                            <p>Accurate & Organized Data</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn secondary">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-right">
+
+                <div class="profile-card">
+
+                    <div class="card-top">
+
+                        <span>MY WORK</span>
+
+                        <div class="live-dot"></div>
+
+                    </div>
+
+
+                    <div class="work-preview">
+
+                        <img src="01_excel_data_entry.png"
+                             alt="Data Entry Portfolio Preview">
+
+                    </div>
+
+
+                    <div class="work-info">
+
+                        <div>
+
+                            <small>FEATURED PROJECT</small>
+
+                            <h3>Professional Data Entry</h3>
+
+                        </div>
+
+                        <span class="arrow">↗</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+                    <div>
+                        <strong>3+</strong>
+                        <span>Core Skills</span>
+                    </div>
+
+                    <div>
+                        <strong>10+</strong>
+                        <span>Creative Projects</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Commitment</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOTTOM INFO ================= -->
+
+        <section class="bottom-area">
+
+            <div class="mini-card">
+
+                <span class="mini-icon">01</span>
+
+                <div>
+                    <h4>AI Visual Creation</h4>
+                    <p>Creative visuals for brands and social media.</p>
+                </div>
+
+            </div>
+
+
+            <div class="mini-card">
+
+                <span class="mini-icon">02</span>
+
+                <div>
+                    <h4>Video Editing</h4>
+                    <p>Clean and engaging short-form video content.</p>
+                </div>
+
+            </div>
+
+
+            <div class="mini-card">
+
+                <span class="mini-icon">03</span>
+
+                <div>
+                    <h4>Data Entry</h4>
+                    <p>Accurate spreadsheets, research and organization.</p>
+                </div>
+
+            </div>
+
+
+            <div class="mini-card trust">
+
+                <span class="trust-check">✓</span>
+
+                <div>
+                    <h4>Reliable Workflow</h4>
+                    <p>Detail-oriented • Organized • Professional</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HIDDEN CONTENT AREAS ================= -->
+
+        <!-- These exist for navigation but remain within the single-page design. -->
+
+        <div id="projects" class="anchor"></div>
+        <div id="skills" class="anchor"></div>
+        <div id="services" class="anchor"></div>
+        <div id="contact" class="anchor"></div>
+
+    </main>
+
+</div>
 
 </body>
 </html>
