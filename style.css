@@ -889,3 +889,14 @@ h1 strong {
     }
 
 }
+.mini-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.mini-card:hover {
+    transform: translateY(-3px);
+    border-color: #2563eb;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.10);
+}
