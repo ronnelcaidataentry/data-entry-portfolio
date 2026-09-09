@@ -7,21 +7,22 @@
     <title>Ronnel Caingat | AI Visual Creator & Data Entry</title>
 
     <meta name="description"
-        content="Ronnel Caingat is a freelancer specializing in AI Visual Creation, Video Editing, and Data Entry.">
+        content="Ronnel Caingat - AI Visual Creator, Video Editor and Data Entry Freelancer.">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- ================= SIDEBAR ================= -->
+
     <aside class="sidebar">
 
         <div class="profile">
 
-           <div class="profile-logo">
-    <img src="profile1.jpg" alt="Ronnel Caingat">
-</div>
+            <div class="profile-logo">
+                <img src="profile1.jpg" alt="Ronnel Caingat">
+            </div>
 
             <h2>Ronnel Caingat</h2>
 
@@ -34,7 +35,11 @@
 
         </div>
 
+
         <div class="divider"></div>
+
+
+        <!-- NAVIGATION -->
 
         <nav class="navigation">
 
@@ -65,39 +70,64 @@
 
         </nav>
 
+
+        <!-- SIDEBAR BOTTOM -->
+
         <div class="sidebar-bottom">
 
             <p>Based in Philippines</p>
 
             <div class="socials">
-                <a href="#">GH</a>
-                <a href="#">@</a>
+
+                <a href="#" title="GitHub">
+                    GH
+                </a>
+
+                <a href="mailto:your-email@example.com" title="Email">
+                    @
+                </a>
+
             </div>
 
-            <small>© 2026 Ronnel Caingat</small>
+            <small>
+                © 2026 Ronnel Caingat
+            </small>
 
         </div>
 
     </aside>
 
 
-    <!-- MAIN CONTENT -->
+
+    <!-- ================= MAIN ================= -->
+
     <main class="main">
 
         <!-- TOP BAR -->
+
         <header class="topbar">
 
-            <span>PERSONAL PORTFOLIO</span>
+            <span>
+                PERSONAL PORTFOLIO
+            </span>
 
-            <a href="#contact" class="top-button">
+            <a href="mailto:your-email@example.com"
+               class="top-button">
+
                 Let's Work Together →
+                
             </a>
 
         </header>
 
 
-        <!-- HERO -->
+
+        <!-- ================= HERO ================= -->
+
         <section class="hero" id="home">
+
+
+            <!-- LEFT SIDE -->
 
             <div class="hero-content">
 
@@ -105,22 +135,30 @@
                     AVAILABLE FOR FREELANCE PROJECTS
                 </div>
 
+
                 <h1>
                     Turning Ideas Into
                     <strong>Powerful Work.</strong>
                 </h1>
 
+
                 <p class="intro">
-                    I'm <b>Ronnel Caingat</b>, a versatile freelancer specializing in
-                    <b>AI Visual Creation</b>, <b>Video Editing</b>, and
-                    <b>Data Entry</b>. I create clean visuals, engaging content,
-                    and organized digital work that helps businesses save time
-                    and stand out.
+
+                    I'm <b>Ronnel Caingat</b>, a versatile freelancer
+                    specializing in <b>AI Visual Creation</b>,
+                    <b>Video Editing</b>, and <b>Data Entry</b>.
+                    I create clean visuals, engaging content,
+                    and organized digital work that helps businesses
+                    save time and stand out.
+
                 </p>
 
 
+
                 <!-- SERVICES -->
+
                 <div class="service-row">
+
 
                     <div class="service-card">
 
@@ -129,11 +167,17 @@
                         </div>
 
                         <div>
-                            <h3>AI Visual Creator</h3>
-                            <p>AI Images & Creative Content</p>
+                            <h3>
+                                AI Visual Creator
+                            </h3>
+
+                            <p>
+                                AI Images & Creative Content
+                            </p>
                         </div>
 
                     </div>
+
 
 
                     <div class="service-card">
@@ -143,11 +187,17 @@
                         </div>
 
                         <div>
-                            <h3>Video Editing</h3>
-                            <p>Short-form & Social Videos</p>
+                            <h3>
+                                Video Editing
+                            </h3>
+
+                            <p>
+                                Short-form & Social Videos
+                            </p>
                         </div>
 
                     </div>
+
 
 
                     <div class="service-card">
@@ -157,8 +207,13 @@
                         </div>
 
                         <div>
-                            <h3>Data Entry</h3>
-                            <p>Accurate & Organized Data</p>
+                            <h3>
+                                Data Entry
+                            </h3>
+
+                            <p>
+                                Accurate & Organized Data
+                            </p>
                         </div>
 
                     </div>
@@ -166,147 +221,308 @@
                 </div>
 
 
-                <!-- BUTTONS -->
+
+                <!-- HERO BUTTONS -->
+
                 <div class="hero-buttons">
 
-                    <a href="#projects" class="primary-button">
-                        View My Work
-                    </a>
+                    <button
+                        class="primary-button"
+                        onclick="openProjects()">
 
-                    <a href="#contact" class="secondary-button">
-                        Contact Me
+                        View My Work →
+
+                    </button>
+
+
+                    <a
+                        href="mailto:your-email@example.com"
+                        class="secondary-button">
+
+                        ✉ Contact Me
+
                     </a>
 
                 </div>
 
 
-                <!-- MINI PROJECTS -->
-               <div class="mini-projects">
 
-    <a class="mini-card" href="Sample_Project_01_Excel_Data_Entry.xlsx" target="_blank">
-        <div class="project-number">01</div>
+                <!-- ================= PROJECT CARDS ================= -->
 
-        <div class="project-preview">
-            <img src="excel-preview.png" alt="Excel Data Entry Project">
-        </div>
-
-        <h3>Excel Data Entry</h3>
-        <p>Accurate spreadsheet data entry and organization.</p>
-
-        <span class="project-arrow">→</span>
-    </a>
+                <div class="mini-projects" id="projects">
 
 
-    <a class="mini-card" href="Sample_Project_02_Web_Research.xlsx" target="_blank">
-        <div class="project-number">02</div>
+                    <!-- EXCEL -->
 
-<div class="featured-preview">
-    <img src="excel-preview.png" alt="Professional Data Entry Excel Project">
-</div>
-        <h3>Web Research</h3>
-        <p>Online research and organized information collection.</p>
+                    <a
+                        class="mini-card"
+                        href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                        target="_blank">
 
-        <span class="project-arrow">→</span>
-    </a>
-
-
-    <a class="mini-card" href="Sample_Project_03_Data_Cleaning.xlsx" target="_blank">
-        <div class="project-number">03</div>
-
-        <div class="project-preview">
-            <img src="data-cleaning-preview.png" alt="Data Cleaning Project">
-        </div>
-
-        <h3>Data Cleaning</h3>
-        <p>Cleaning, organizing, and formatting data.</p>
-
-        <span class="project-arrow">→</span>
-    </a>
-
-
-    <div class="mini-card workflow-card">
-        <div class="workflow-icon">✓</div>
-
-        <h3>Reliable Workflow</h3>
-        <p>Detail-oriented • Organized • Professional</p>
-
-        <span class="project-arrow">→</span>
-    </div>
-
-</div>
-            <!-- RIGHT FEATURE -->
-            <div class="hero-side">
-
-                <div class="work-preview">
-
-                    <div class="preview-top">
-
-                        <span>MY WORK</span>
-
-                        <i></i>
-
-                    </div>
-
-                    <div class="preview-image">
-
-                        <img src="project-preview.png"
-                             alt="Data Entry Portfolio Preview">
-
-                    </div>
-
-                    <div class="preview-bottom">
-
-                        <div>
-                            <small>FEATURED PROJECT</small>
-
-                            <h3>
-                                Professional Data Entry
-                            </h3>
+                        <div class="project-number">
+                            01
                         </div>
 
-                        <div class="arrow">
+                        <div class="project-preview">
+
+                            <img
+                                src="excel-preview.png"
+                                alt="Excel Data Entry Project">
+
+                        </div>
+
+                        <h3>
+                            Excel Data Entry
+                        </h3>
+
+                        <p>
+                            Accurate spreadsheet data entry.
+                        </p>
+
+                        <span class="project-arrow">
                             ↗
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- WEB RESEARCH -->
+
+                    <a
+                        class="mini-card"
+                        href="Sample_Project_02_Web_Research.xlsx"
+                        target="_blank">
+
+                        <div class="project-number">
+                            02
                         </div>
 
-                    </div>
+                        <div class="project-preview">
 
-                </div>
+                            <img
+                                src="web-research-preview.png"
+                                alt="Web Research Project">
+
+                        </div>
+
+                        <h3>
+                            Web Research
+                        </h3>
+
+                        <p>
+                            Organized online research.
+                        </p>
+
+                        <span class="project-arrow">
+                            ↗
+                        </span>
+
+                    </a>
 
 
-                <!-- STATS -->
-                <div class="stats">
 
-                    <div>
-                        <strong>3+</strong>
-                        <span>Core Skills</span>
-                    </div>
+                    <!-- DATA CLEANING -->
 
-                    <div>
-                        <strong>10+</strong>
-                        <span>Creative Projects</span>
-                    </div>
+                    <a
+                        class="mini-card"
+                        href="Sample_Project_03_Data_Cleaning.xlsx"
+                        target="_blank">
 
-                    <div>
-                        <strong>100%</strong>
-                        <span>Commitment</span>
+                        <div class="project-number">
+                            03
+                        </div>
+
+                        <div class="project-preview">
+
+                            <img
+                                src="data-cleaning-preview.png"
+                                alt="Data Cleaning Project">
+
+                        </div>
+
+                        <h3>
+                            Data Cleaning
+                        </h3>
+
+                        <p>
+                            Cleaning and organizing data.
+                        </p>
+
+                        <span class="project-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- WORKFLOW -->
+
+                    <div class="mini-card workflow-card">
+
+                        <div class="workflow-icon">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Reliable Workflow
+                        </h3>
+
+                        <p>
+                            Detail-oriented • Organized
+                        </p>
+
+                        <span class="project-arrow">
+                            ✓
+                        </span>
+
                     </div>
 
                 </div>
 
             </div>
 
+
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <div class="hero-side">
+
+
+                <!-- FEATURED PROJECT -->
+
+                <div class="work-preview">
+
+
+                    <div class="preview-top">
+
+                        <span>
+                            MY WORK
+                        </span>
+
+                        <i></i>
+
+                    </div>
+
+
+                    <div class="preview-image">
+
+                        <img
+                            src="excel-preview.png"
+                            alt="Professional Data Entry">
+
+                    </div>
+
+
+                    <div class="preview-bottom">
+
+                        <div>
+
+                            <small>
+                                FEATURED PROJECT
+                            </small>
+
+                            <h3>
+                                Professional Data Entry
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                            target="_blank"
+                            class="featured-arrow">
+
+                            ↗
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATS -->
+
+                <div class="stats">
+
+
+                    <div>
+
+                        <strong>
+                            3+
+                        </strong>
+
+                        <span>
+                            Core Skills
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            10+
+                        </strong>
+
+                        <span>
+                            Creative Projects
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            100%
+                        </strong>
+
+                        <span>
+                            Commitment
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </section>
 
 
-        <!-- PROJECT SECTION -->
-        <section id="projects" class="hidden-section">
 
-            <h2>My Projects</h2>
+        <!-- ================= HIDDEN INFORMATION ================= -->
+
+        <section id="skills" class="hidden-section">
+
+            <h2>Skills</h2>
+
+            <p>
+                AI Visual Creation • Video Editing • Data Entry •
+                Web Research • Data Organization
+            </p>
 
         </section>
 
 
-        <!-- CONTACT -->
+        <section id="services" class="hidden-section">
+
+            <h2>Services</h2>
+
+            <p>
+                AI Image Generation • AI Video Creation •
+                Video Editing • Data Entry • Web Research
+            </p>
+
+        </section>
+
+
         <section id="contact" class="hidden-section">
 
             <h2>Let's Work Together</h2>
@@ -314,6 +530,127 @@
         </section>
 
     </main>
+
+
+
+    <!-- ================= PROJECT POPUP ================= -->
+
+    <div
+        class="project-overlay"
+        id="projectOverlay"
+        onclick="closeProjects(event)">
+
+        <div class="project-modal"
+             onclick="event.stopPropagation()">
+
+            <button
+                class="close-button"
+                onclick="closeProjects()">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                My Projects
+            </h2>
+
+            <p>
+                Click a project below to open the complete Excel file.
+            </p>
+
+
+            <div class="modal-projects">
+
+
+                <a
+                    href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                    target="_blank">
+
+                    <span>
+                        01
+                    </span>
+
+                    Excel Data Entry
+
+                    <b>
+                        ↗
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="Sample_Project_02_Web_Research.xlsx"
+                    target="_blank">
+
+                    <span>
+                        02
+                    </span>
+
+                    Web Research
+
+                    <b>
+                        ↗
+                    </b>
+
+                </a>
+
+
+                <a
+                    href="Sample_Project_03_Data_Cleaning.xlsx"
+                    target="_blank">
+
+                    <span>
+                        03
+                    </span>
+
+                    Data Cleaning
+
+                    <b>
+                        ↗
+                    </b>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function openProjects() {
+
+            document
+                .getElementById("projectOverlay")
+                .classList.add("show");
+
+        }
+
+
+        function closeProjects(event) {
+
+            if (
+                !event ||
+                event.target.id === "projectOverlay"
+            ) {
+
+                document
+                    .getElementById("projectOverlay")
+                    .classList.remove("show");
+
+            }
+
+        }
+
+    </script>
 
 </body>
 </html>
