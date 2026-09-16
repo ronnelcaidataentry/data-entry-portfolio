@@ -38,32 +38,32 @@
 
         <nav class="navigation">
 
-            <a href="#home" class="active">
-                <span>⌂</span>
-                Home
-            </a>
+    <a href="#" class="active" data-popup="home">
+        <span>⌂</span>
+        Home
+    </a>
 
-            <a href="#projects">
-                <span>▣</span>
-                Projects
-            </a>
+    <a href="#" data-popup="projects">
+        <span>▣</span>
+        Projects
+    </a>
 
-            <a href="#skills">
-                <span>✦</span>
-                Skills
-            </a>
+    <a href="#" data-popup="skills">
+        <span>✦</span>
+        Skills
+    </a>
 
-            <a href="#services">
-                <span>◆</span>
-                Services
-            </a>
+    <a href="#" data-popup="services">
+        <span>◆</span>
+        Services
+    </a>
 
-           <a href="mailto:ronnelpcaingat89@gmail.com?subject=Freelance%20Project%20Inquiry%20-%20Ronnel%20Caingat">
-    <span>✉</span>
-    Contact
-</a>
+    <a href="mailto:ronnelpcaingat89@gmail.com?subject=Freelance%20Project%20Inquiry%20-%20Ronnel%20Caingat">
+        <span>✉</span>
+        Contact
+    </a>
 
-        </nav>
+</nav>
 
         <div class="sidebar-bottom">
 
@@ -172,13 +172,9 @@
                 <!-- BUTTONS -->
                 <div class="hero-buttons">
 
-                    <a
-                        href="#projects"
-                        class="primary-button">
-
-                        View My Work →
-
-                    </a>
+                   <a href="#" class="primary-button" data-popup="projects">
+    View My Work →
+</a>
 
 
                    <a href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Inquiry%20-%20Ronnel%20Caingat&body=Hello%20Ronnel,%0A%0AI%20am%20interested%20in%20working%20with%20you.%0A%0AProject%20Details:%0A%0ABudget:%0A%0ADeadline:%0A%0AThank%20you." class="secondary-button">
@@ -390,12 +386,359 @@
                     </div>
 
                 </div>
+<!-- TOOLS & PLATFORMS -->
+<div class="tools-box">
 
+    <div class="tools-title">
+        TOOLS & PLATFORMS
+    </div>
+
+    <div class="tools-badges">
+
+        <button class="tool-badge" data-popup="linkedin">
+            LinkedIn
+        </button>
+
+        <button class="tool-badge" data-popup="gimp">
+            GIMP
+        </button>
+
+        <button class="tool-badge" data-popup="excel">
+            Excel
+        </button>
+
+        <button class="tool-badge" data-popup="canva">
+            Canva
+        </button>
+
+        <button class="tool-badge" data-popup="capcut">
+            CapCut
+        </button>
+
+        <button class="tool-badge" data-popup="facebook">
+            Facebook
+        </button>
+
+        <button class="tool-badge" data-popup="tiktok">
+            TikTok
+        </button>
+
+        <button class="tool-badge" data-popup="instagram">
+            Instagram
+        </button>
+
+        <button class="tool-badge" data-popup="claude">
+            Claude
+        </button>
+
+    </div>
+
+</div>
             </div>
 
         </section>
 
     </main>
+<!-- ================= POPUP SYSTEM ================= -->
 
+<div class="popup-overlay" id="popupOverlay">
+
+    <div class="popup-box">
+
+        <button class="popup-close" id="popupClose">
+            ×
+        </button>
+
+
+        <!-- PROJECTS -->
+        <div class="popup-content" id="popup-projects">
+
+            <div class="popup-label">
+                MY PROJECTS
+            </div>
+
+            <h2>
+                Data Entry Portfolio
+            </h2>
+
+            <p>
+                Here are my sample data entry projects demonstrating
+                accuracy, organization, research, and data cleaning.
+            </p>
+
+            <div class="popup-projects">
+
+                <a
+                    href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                    target="_blank"
+                    class="popup-project">
+
+                    <span class="popup-number">01</span>
+
+                    <div>
+                        <h3>Excel Data Entry</h3>
+                        <p>
+                            Spreadsheet data entry and organization.
+                        </p>
+                    </div>
+
+                    <strong>↗</strong>
+
+                </a>
+
+
+                <a
+                    href="Sample_Project_02_Web_Research.xlsx"
+                    target="_blank"
+                    class="popup-project">
+
+                    <span class="popup-number">02</span>
+
+                    <div>
+                        <h3>Web Research</h3>
+                        <p>
+                            Online research and information collection.
+                        </p>
+                    </div>
+
+                    <strong>↗</strong>
+
+                </a>
+
+
+                <a
+                    href="Sample_Project_03_Data_Cleaning.xlsx"
+                    target="_blank"
+                    class="popup-project">
+
+                    <span class="popup-number">03</span>
+
+                    <div>
+                        <h3>Data Cleaning</h3>
+                        <p>
+                            Cleaning, formatting, and organizing data.
+                        </p>
+                    </div>
+
+                    <strong>↗</strong>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SKILLS -->
+        <div class="popup-content" id="popup-skills">
+
+            <div class="popup-label">
+                MY SKILLS
+            </div>
+
+            <h2>
+                Skills & Expertise
+            </h2>
+
+            <p>
+                A combination of creative, technical, and organizational
+                skills for digital freelance projects.
+            </p>
+
+            <div class="skill-list">
+
+                <span>AI Image Generation</span>
+                <span>AI Visual Creation</span>
+                <span>AI Content Creation</span>
+                <span>Graphic Design</span>
+                <span>Video Editing</span>
+                <span>AI Video Generation</span>
+                <span>Data Entry</span>
+                <span>Data Cleaning</span>
+                <span>Data Research</span>
+                <span>Web Research</span>
+                <span>Spreadsheet Management</span>
+                <span>Attention to Detail</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="popup-content" id="popup-services">
+
+            <div class="popup-label">
+                MY SERVICES
+            </div>
+
+            <h2>
+                What I Can Help With
+            </h2>
+
+            <div class="service-popup-list">
+
+                <div>
+                    <b>✦ AI Visual Creation</b>
+                    <p>
+                        AI-generated images, creative concepts,
+                        product visuals, and social media content.
+                    </p>
+                </div>
+
+                <div>
+                    <b>▶ Video Editing</b>
+                    <p>
+                        Short-form videos, social media content,
+                        promotional videos, and AI video projects.
+                    </p>
+                </div>
+
+                <div>
+                    <b>▤ Data Entry</b>
+                    <p>
+                        Accurate data entry, spreadsheet organization,
+                        data cleaning, and web research.
+                    </p>
+                </div>
+
+            </div>
+
+            <a
+                href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Proposal%20-%20Ronnel%20Caingat"
+                class="popup-contact">
+
+                Discuss a Project →
+
+            </a>
+
+        </div>
+
+
+        <!-- TOOLS INFORMATION -->
+
+        <div class="popup-content" id="popup-linkedin">
+
+            <div class="popup-label">PLATFORM</div>
+
+            <h2>LinkedIn</h2>
+
+            <p>
+                Professional networking and freelance presence.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-gimp">
+
+            <div class="popup-label">DESIGN TOOL</div>
+
+            <h2>GIMP</h2>
+
+            <p>
+                Image editing and graphic design work.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-excel">
+
+            <div class="popup-label">DATA TOOL</div>
+
+            <h2>Microsoft Excel</h2>
+
+            <p>
+                Spreadsheet data entry, organization,
+                formatting, and data cleaning.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-canva">
+
+            <div class="popup-label">DESIGN TOOL</div>
+
+            <h2>Canva</h2>
+
+            <p>
+                Social media graphics, presentations,
+                promotional designs, and visual content.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-capcut">
+
+            <div class="popup-label">VIDEO TOOL</div>
+
+            <h2>CapCut</h2>
+
+            <p>
+                Short-form video editing and social media content.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-facebook">
+
+            <div class="popup-label">SOCIAL PLATFORM</div>
+
+            <h2>Facebook</h2>
+
+            <p>
+                Social media content and visual communication.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-tiktok">
+
+            <div class="popup-label">SOCIAL PLATFORM</div>
+
+            <h2>TikTok</h2>
+
+            <p>
+                Short-form video content and creative visuals.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-instagram">
+
+            <div class="popup-label">SOCIAL PLATFORM</div>
+
+            <h2>Instagram</h2>
+
+            <p>
+                Visual content, reels, graphics, and promotional
+                social media content.
+            </p>
+
+        </div>
+
+
+        <div class="popup-content" id="popup-claude">
+
+            <div class="popup-label">AI TOOL</div>
+
+            <h2>Claude</h2>
+
+            <p>
+                AI-assisted content creation, research,
+                writing, and workflow support.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>
