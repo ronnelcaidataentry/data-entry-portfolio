@@ -833,3 +833,170 @@ document.addEventListener("keydown", function(event) {
 });
 
 </script>
+/* =========================================
+   TOOLS & PLATFORM ICONS
+========================================= */
+
+.tools-box {
+    margin-top: 8px;
+    padding: 12px;
+
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #dce5f2;
+    border-radius: 14px;
+}
+
+.tools-title {
+    margin-bottom: 10px;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+
+    color: #7185a7;
+}
+
+
+/* ICON GRID */
+
+.tools-icons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+}
+
+
+/* ICON BUTTON */
+
+.tool-icon {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: 7px 3px;
+
+    border: 1px solid #e0e7f1;
+    border-radius: 9px;
+
+    background: #f8faff;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.tool-icon:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    border-color: #9eb9f2;
+
+    box-shadow:
+        0 8px 18px rgba(45, 82, 150, 0.12);
+}
+
+
+/* MAIN ICON */
+
+.tool-symbol {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    color: white;
+}
+
+
+/* NAME */
+
+.tool-icon small {
+    max-width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    color: #536987;
+}
+
+
+/* =========================================
+   INDIVIDUAL ICON STYLES
+========================================= */
+
+.linkedin-icon {
+    background: #0a66c2;
+    font-family: Arial, sans-serif;
+}
+
+
+.gimp-icon {
+    background: #6b5b3e;
+    font-family: Georgia, serif;
+}
+
+
+.excel-icon {
+    background: #217346;
+    font-family: Arial, sans-serif;
+}
+
+
+.canva-icon {
+    background: #6c63ff;
+    font-family: Arial, sans-serif;
+}
+
+
+.capcut-icon {
+    background: #111827;
+    font-size: 12px;
+}
+
+
+.facebook-icon {
+    background: #1877f2;
+    font-family: Arial, sans-serif;
+}
+
+
+.tiktok-icon {
+    background: #111111;
+    font-size: 17px;
+}
+
+
+.instagram-icon {
+    background: #d62976;
+    font-size: 19px;
+}
+
+
+.claude-icon {
+    background: #c96b3c;
+    font-size: 17px;
+}
