@@ -7,358 +7,1121 @@
     <title>Ronnel Caingat | AI Visual Creator & Data Entry</title>
 
     <meta name="description"
-        content="Ronnel Caingat - AI Visual Creator, Video Editor and Data Entry Freelancer.">
+        content="Ronnel Caingat is a freelancer specializing in AI Visual Creation, Video Editing, and Data Entry.">
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef3f9;
+            color: #17243a;
+        }
+
+        body {
+            display: flex;
+        }
+
+        /* =========================
+           SIDEBAR
+        ========================= */
+
+        .sidebar {
+            width: 230px;
+            height: 100vh;
+            background: #ffffff;
+            border-right: 1px solid #dfe7f1;
+            padding: 25px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile-logo {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ffffff;
+            box-shadow: 0 5px 18px rgba(30, 70, 130, 0.18);
+            background: #e8eef8;
+        }
+
+        .profile-logo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .profile h2 {
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .profile p {
+            font-size: 10px;
+            color: #71809a;
+            line-height: 1.4;
+        }
+
+        .available {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            padding: 5px 9px;
+            border-radius: 20px;
+            background: #eaf8ef;
+            color: #25834a;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .available-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #32a852;
+        }
+
+        /* NAVIGATION */
+
+        .navigation {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #61718b;
+            padding: 11px 13px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.2s;
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            background: #edf3ff;
+            color: #315eb2;
+        }
+
+        .navigation span {
+            font-size: 15px;
+        }
+
+        .sidebar-bottom {
+            text-align: center;
+        }
+
+        .sidebar-bottom p {
+            font-size: 8px;
+            color: #9aa8ba;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-contact {
+            display: block;
+            text-decoration: none;
+            background: #315eb2;
+            color: white;
+            padding: 11px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .sidebar-contact:hover {
+            background: #244b94;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .main {
+            flex: 1;
+            height: 100vh;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            height: 58px;
+            background: rgba(255,255,255,0.92);
+            border-bottom: 1px solid #dfe7f1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            flex-shrink: 0;
+        }
+
+        .topbar-title {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #7b8ba4;
+        }
+
+        .top-button {
+            text-decoration: none;
+            background: #315eb2;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 9px;
+            font-size: 9px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .top-button:hover {
+            background: #244b94;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            height: calc(100vh - 58px);
+            padding: 24px 28px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.35fr) minmax(270px, 0.65fr);
+            gap: 20px;
+            overflow: hidden;
+        }
+
+        .hero-left {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-intro {
+            padding-top: 5px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            color: #5474a8;
+            margin-bottom: 9px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 72px);
+            line-height: 0.95;
+            letter-spacing: -3px;
+            max-width: 750px;
+            color: #17243a;
+        }
+
+        .hero h1 strong {
+            color: #315eb2;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin-top: 14px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #687891;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 9px;
+            margin-top: 17px;
+        }
+
+        .primary-button,
+        .secondary-button {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            border-radius: 9px;
+            font-size: 10px;
+            font-weight: 800;
+            transition: 0.2s;
+        }
+
+        .primary-button {
+            background: #315eb2;
+            color: white;
+        }
+
+        .primary-button:hover {
+            background: #244b94;
+            transform: translateY(-2px);
+        }
+
+        .secondary-button {
+            background: white;
+            color: #315eb2;
+            border: 1px solid #ccd8ea;
+        }
+
+        .secondary-button:hover {
+            border-color: #315eb2;
+            transform: translateY(-2px);
+        }
+
+        /* SERVICE CARDS */
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 9px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.9);
+            border: 1px solid #dce5f1;
+            border-radius: 12px;
+            padding: 13px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: #9db7e8;
+            box-shadow: 0 10px 25px rgba(47, 87, 150, 0.1);
+        }
+
+        .service-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: #edf3ff;
+            color: #315eb2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .service-card h3 {
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .service-card p {
+            font-size: 8px;
+            line-height: 1.5;
+            color: #7b8ba2;
+        }
+
+        /* =========================
+           PROJECT STRIP
+        ========================= */
+
+        .projects-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .mini-card {
+            text-decoration: none;
+            color: inherit;
+            background: white;
+            border: 1px solid #dce5f1;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px);
+            border-color: #9db7e8;
+        }
+
+        .mini-card img {
+            width: 100%;
+            height: 54px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .mini-card-info {
+            padding: 7px 9px;
+        }
+
+        .mini-card-info h4 {
+            font-size: 8px;
+            margin-bottom: 2px;
+        }
+
+        .mini-card-info span {
+            font-size: 7px;
+            color: #8090a7;
+        }
+
+        /* =========================
+           RIGHT PANEL
+        ========================= */
+
+        .hero-right {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .featured {
+            background: white;
+            border: 1px solid #dce5f1;
+            border-radius: 15px;
+            padding: 11px;
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 160px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #edf2f8;
+            flex-shrink: 0;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .featured-label {
+            margin-top: 9px;
+            font-size: 7px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #7184a2;
+        }
+
+        .featured h2 {
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        .featured p {
+            font-size: 8px;
+            line-height: 1.5;
+            color: #7a899e;
+            margin-top: 5px;
+        }
+
+        .featured-button {
+            margin-top: 8px;
+            border: 0;
+            background: #edf3ff;
+            color: #315eb2;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 8px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        /* =========================
+           TOOLS
+        ========================= */
+
+        .tools-box {
+            padding: 11px;
+            background: rgba(255,255,255,0.95);
+            border: 1px solid #dce5f2;
+            border-radius: 13px;
+        }
+
+        .tools-title {
+            margin-bottom: 8px;
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1.1px;
+            color: #7185a7;
+        }
+
+        .tools-icons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+        }
+
+        .tool-icon {
+            min-width: 0;
+            border: 1px solid #e0e7f1;
+            border-radius: 8px;
+            background: #f8faff;
+            padding: 6px 2px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            transition: 0.2s;
+        }
+
+        .tool-icon:hover {
+            transform: translateY(-3px);
+            background: #ffffff;
+            border-color: #9eb9f2;
+            box-shadow: 0 7px 16px rgba(45, 82, 150, 0.12);
+        }
+
+        .tool-symbol {
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 7px;
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .tool-icon small {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 6px;
+            font-weight: 700;
+            color: #536987;
+        }
+
+        .linkedin-icon { background: #0a66c2; }
+        .gimp-icon { background: #6b5b3e; }
+        .excel-icon { background: #217346; }
+        .canva-icon { background: #635bff; }
+        .capcut-icon { background: #111827; }
+        .facebook-icon { background: #1877f2; }
+        .tiktok-icon { background: #111111; }
+        .instagram-icon { background: #d62976; }
+        .claude-icon { background: #c96b3c; }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 7px;
+        }
+
+        .stat {
+            background: white;
+            border: 1px solid #dce5f1;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 14px;
+            color: #315eb2;
+        }
+
+        .stat span {
+            font-size: 6px;
+            color: #7d8da4;
+            font-weight: 700;
+        }
+
+        /* =========================
+           POPUP
+        ========================= */
+
+        .popup-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 28, 50, 0.58);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 9999;
+        }
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+        .popup-box {
+            width: min(650px, 94vw);
+            max-height: 82vh;
+            overflow-y: auto;
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            position: relative;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            width: 30px;
+            height: 30px;
+            border: 0;
+            border-radius: 50%;
+            background: #edf2f8;
+            color: #51627d;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .popup-close:hover {
+            background: #dfe8f4;
+        }
+
+        .popup-content {
+            display: none;
+        }
+
+        .popup-content.active {
+            display: block;
+        }
+
+        .popup-content h2 {
+            font-size: 24px;
+            color: #17243a;
+            margin-bottom: 8px;
+        }
+
+        .popup-content > p {
+            font-size: 11px;
+            line-height: 1.7;
+            color: #71809a;
+            margin-bottom: 17px;
+        }
+
+        /* POPUP GRID */
+
+        .popup-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .popup-card {
+            background: #f7f9fc;
+            border: 1px solid #e0e7f1;
+            border-radius: 11px;
+            padding: 13px;
+        }
+
+        .popup-card h3 {
+            font-size: 11px;
+            margin-bottom: 5px;
+            color: #315eb2;
+        }
+
+        .popup-card p {
+            font-size: 8px;
+            line-height: 1.6;
+            color: #74839a;
+        }
+
+        /* PROJECT POPUP */
+
+        .popup-project {
+            border: 1px solid #dfe7f1;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .popup-project img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .popup-project-info {
+            padding: 11px;
+        }
+
+        .popup-project-info h3 {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .popup-project-info p {
+            font-size: 8px;
+            line-height: 1.5;
+            color: #71809a;
+        }
+
+        .file-button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 7px 10px;
+            border-radius: 7px;
+            background: #315eb2;
+            color: white;
+            text-decoration: none;
+            font-size: 8px;
+            font-weight: 700;
+        }
+
+        /* SKILLS */
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 9px;
+        }
+
+        .skill {
+            padding: 12px;
+            border: 1px solid #e0e7f1;
+            border-radius: 10px;
+            background: #f8faff;
+        }
+
+        .skill h3 {
+            font-size: 10px;
+            margin-bottom: 5px;
+            color: #315eb2;
+        }
+
+        .skill p {
+            font-size: 8px;
+            line-height: 1.5;
+            color: #71809a;
+        }
+
+        /* SERVICE POPUP */
+
+        .service-popup-card {
+            padding: 14px;
+            border: 1px solid #dfe7f1;
+            border-radius: 11px;
+            margin-bottom: 9px;
+            background: #f8faff;
+        }
+
+        .service-popup-card h3 {
+            font-size: 12px;
+            color: #315eb2;
+            margin-bottom: 5px;
+        }
+
+        .service-popup-card p {
+            font-size: 9px;
+            line-height: 1.6;
+            color: #71809a;
+        }
+
+        /* TOOL POPUP */
+
+        .tool-popup-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 13px;
+        }
+
+        .popup-contact-button {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background: #315eb2;
+            color: white;
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            html,
+            body {
+                overflow: auto;
+            }
+
+            body {
+                display: block;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                padding: 15px;
+            }
+
+            .profile-logo {
+                width: 58px;
+                height: 58px;
+            }
+
+            .navigation {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .sidebar-bottom {
+                margin-top: 12px;
+            }
+
+            .main {
+                height: auto;
+            }
+
+            .topbar {
+                padding: 0 15px;
+            }
+
+            .hero {
+                height: auto;
+                padding: 18px 15px 30px;
+                grid-template-columns: 1fr;
+                overflow: visible;
+            }
+
+            .hero-right {
+                margin-top: 10px;
+            }
+
+            .service-cards,
+            .projects-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-icons {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .popup-overlay {
+                padding: 10px;
+            }
+
+            .popup-box {
+                max-height: 90vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- SIDEBAR -->
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
     <aside class="sidebar">
 
-        <div class="profile">
+        <div>
 
-            <div class="profile-logo">
-                <img src="profile1.jpg" alt="Ronnel Caingat">
+            <div class="profile">
+
+                <div class="profile-logo">
+                    <img src="profile1.jpg" alt="Ronnel Caingat">
+                </div>
+
+                <h2>Ronnel Caingat</h2>
+
+                <p>
+                    AI Visual Creator<br>
+                    Video Editing & Data Entry
+                </p>
+
+                <div class="available">
+                    <span class="available-dot"></span>
+                    Available for work
+                </div>
+
             </div>
 
-            <h2>Ronnel Caingat</h2>
+            <nav class="navigation">
 
-            <p class="username">@ronnelcai</p>
+                <a href="#" class="active" data-popup="home">
+                    <span>⌂</span>
+                    Home
+                </a>
 
-            <div class="availability">
-                <span></span>
-                Available for work
-            </div>
+                <a href="#" data-popup="projects">
+                    <span>▣</span>
+                    Projects
+                </a>
+
+                <a href="#" data-popup="skills">
+                    <span>✦</span>
+                    Skills
+                </a>
+
+                <a href="#" data-popup="services">
+                    <span>◆</span>
+                    Services
+                </a>
+
+                <a href="mailto:ronnelpcaingat89@gmail.com?subject=Freelance%20Project%20Inquiry%20-%20Ronnel%20Caingat">
+                    <span>✉</span>
+                    Contact
+                </a>
+
+            </nav>
 
         </div>
 
-        <div class="divider"></div>
-
-        <nav class="navigation">
-
-    <a href="#" class="active" data-popup="home">
-        <span>⌂</span>
-        Home
-    </a>
-
-    <a href="#" data-popup="projects">
-        <span>▣</span>
-        Projects
-    </a>
-
-    <a href="#" data-popup="skills">
-        <span>✦</span>
-        Skills
-    </a>
-
-    <a href="#" data-popup="services">
-        <span>◆</span>
-        Services
-    </a>
-
-    <a href="mailto:ronnelpcaingat89@gmail.com?subject=Freelance%20Project%20Inquiry%20-%20Ronnel%20Caingat">
-        <span>✉</span>
-        Contact
-    </a>
-
-</nav>
-
         <div class="sidebar-bottom">
 
-            <p>Based in Philippines</p>
+            <p>Let's create something useful together.</p>
 
-            <div class="socials">
-
-                <a href="#" title="GitHub">
-                    GH
-                </a>
-
-                <a href="mailto:ronnelpcaingat89@gmail.com"
-                   title="Send Email">
-                    @
-                </a>
-
-            </div>
-
-            <small>© 2026 Ronnel Caingat</small>
+            <a
+                class="sidebar-contact"
+                href="mailto:ronnelpcaingat89@gmail.com?subject=Freelance%20Project%20Inquiry%20-%20Ronnel%20Caingat"
+            >
+                ✉ Contact Me
+            </a>
 
         </div>
 
     </aside>
 
 
-    <!-- MAIN -->
+    <!-- =========================
+         MAIN
+    ========================= -->
+
     <main class="main">
 
-        <!-- TOP BAR -->
         <header class="topbar">
 
-            <span>PERSONAL PORTFOLIO</span>
+            <div class="topbar-title">
+                AI VISUAL CREATOR • VIDEO EDITING • DATA ENTRY
+            </div>
 
-           <a href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Proposal%20-%20Ronnel%20Caingat&body=Hello%20Ronnel,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%0A%0AProject%20Details:%0A%0ABudget:%0A%0ADeadline:%0A%0AThank%20you." class="top-button">
-    Let's Work Together →
-</a>
+            <a
+                class="top-button"
+                href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Proposal%20-%20Ronnel%20Caingat&body=Hello%20Ronnel,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%0A%0AProject%20Details:%0A%0ABudget:%0A%0ADeadline:%0A%0AThank%20you."
+            >
+                Let's Work Together →
+            </a>
 
         </header>
 
 
-        <!-- HERO -->
-        <section class="hero" id="home">
+        <section class="hero">
 
             <!-- LEFT -->
-            <div class="hero-content">
 
-                <div class="eyebrow">
-                    AVAILABLE FOR FREELANCE PROJECTS
-                </div>
+            <div class="hero-left">
 
-                <h1>
-                    Turning Ideas Into
-                    <strong>Powerful Work.</strong>
-                </h1>
+                <div class="hero-intro">
 
-                <p class="intro">
-                    I'm <b>Ronnel Caingat</b>, a versatile freelancer specializing in
-                    <b>AI Visual Creation</b>, <b>Video Editing</b>, and
-                    <b>Data Entry</b>. I create clean visuals, engaging content,
-                    and organized digital work that helps businesses save time
-                    and stand out.
-                </p>
+                    <span class="eyebrow">
+                        CREATIVE + ORGANIZED DIGITAL SUPPORT
+                    </span>
 
+                    <h1>
+                        Turning Ideas Into
+                        <strong>Powerful Work.</strong>
+                    </h1>
 
-                <!-- SERVICES -->
-                <div class="service-row">
+                    <p class="hero-description">
+                        I create AI-generated visuals, engaging videos, modern graphic
+                        designs, and accurate data entry solutions that help brands,
+                        businesses, and creators stay organized and stand out.
+                    </p>
 
-                    <div class="service-card">
+                    <div class="hero-buttons">
 
-                        <div class="service-icon">✦</div>
+                        <a href="#" class="primary-button" data-popup="projects">
+                            View My Work →
+                        </a>
 
-                        <div>
-                            <h3>AI Visual Creator</h3>
-                            <p>AI Images & Creative Content</p>
-                        </div>
+                        <a
+                            href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Inquiry%20-%20Ronnel%20Caingat&body=Hello%20Ronnel,%0A%0AI%20am%20interested%20in%20working%20with%20you.%0A%0AProject%20Details:%0A%0ABudget:%0A%0ADeadline:%0A%0AThank%20you."
+                            class="secondary-button"
+                        >
+                            ✉ Contact Me
+                        </a>
 
                     </div>
 
 
-                    <div class="service-card">
+                    <!-- SERVICES -->
 
-                        <div class="service-icon">▶</div>
+                    <div class="service-cards">
 
-                        <div>
+                        <div class="service-card" data-popup="services">
+
+                            <div class="service-icon">
+                                ✦
+                            </div>
+
+                            <h3>AI Visual Creation</h3>
+
+                            <p>
+                                AI-generated images and creative visual concepts
+                                for digital content.
+                            </p>
+
+                        </div>
+
+
+                        <div class="service-card" data-popup="services">
+
+                            <div class="service-icon">
+                                ▶
+                            </div>
+
                             <h3>Video Editing</h3>
-                            <p>Short-form & Social Videos</p>
+
+                            <p>
+                                Short-form videos, social media content,
+                                and engaging visual edits.
+                            </p>
+
                         </div>
 
-                    </div>
 
+                        <div class="service-card" data-popup="services">
 
-                    <div class="service-card">
+                            <div class="service-icon">
+                                ▤
+                            </div>
 
-                        <div class="service-icon">▤</div>
-
-                        <div>
                             <h3>Data Entry</h3>
-                            <p>Accurate & Organized Data</p>
+
+                            <p>
+                                Accurate data entry, cleaning, research,
+                                and spreadsheet organization.
+                            </p>
+
                         </div>
 
                     </div>
 
-                </div>
 
+                    <!-- PROJECTS -->
 
-                <!-- BUTTONS -->
-                <div class="hero-buttons">
+                    <div class="projects-strip">
 
-                   <a href="#" class="primary-button" data-popup="projects">
-    View My Work →
-</a>
-
-
-                   <a href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Inquiry%20-%20Ronnel%20Caingat&body=Hello%20Ronnel,%0A%0AI%20am%20interested%20in%20working%20with%20you.%0A%0AProject%20Details:%0A%0ABudget:%0A%0ADeadline:%0A%0AThank%20you." class="secondary-button">
-    ✉ Contact Me
-</a>
-
-                </div>
-
-
-                <!-- PROJECTS -->
-                <div class="mini-projects" id="projects">
-
-
-                    <!-- EXCEL DATA ENTRY -->
-                    <a
-                        class="mini-card"
-                        href="Sample_Project_01_Excel_Data_Entry.xlsx"
-                        target="_blank">
-
-                        <div class="project-number">
-                            01
-                        </div>
-
-                        <div class="project-preview">
+                        <a
+                            class="mini-card"
+                            href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                            target="_blank"
+                        >
 
                             <img
-                                src=01_excel_data_entry(1).png
-                                alt="Excel Data Entry Sample">
+                                src="excel-preview.png"
+                                alt="Excel Data Entry"
+                            >
 
-                        </div>
+                            <div class="mini-card-info">
 
-                        <h3>
-                            Excel Data Entry
-                        </h3>
+                                <h4>Excel Data Entry</h4>
 
-                        <p>
-                            Accurate spreadsheet data.
-                        </p>
+                                <span>Spreadsheet Management</span>
 
-                        <span class="project-arrow">
-                            ↗
-                        </span>
+                            </div>
 
-                    </a>
-
-
-                    <!-- WEB RESEARCH -->
-                    <a
-                        class="mini-card"
-                        href="Sample_Project_02_Web_Research.xlsx"
-                        target="_blank">
-
-                        <div class="project-number">
-                            02
-                        </div>
-
-                        <div class="project-preview">
-
-                            <img
-                                src="02_web_research(1).png"
-                                alt="Web Research Sample">
-
-                        </div>
-
-                        <h3>
-                            Web Research
-                        </h3>
-
-                        <p>
-                            Organized online research.
-                        </p>
-
-                        <span class="project-arrow">
-                            ↗
-                        </span>
-
-                    </a>
-
-
-                    <!-- DATA CLEANING -->
-                    <a
-                        class="mini-card"
-                        href="Sample_Project_03_Data_Cleaning.xlsx"
-                        target="_blank">
-
-                        <div class="project-number">
-                            03
-                        </div>
-
-                        <div class="project-preview">
-
-                            <img
-                                src="03_data_cleaning(1).png"
-                                alt="Data Cleaning Sample">
-
-                        </div>
-
-                        <h3>
-                            Data Cleaning
-                        </h3>
-
-                        <p>
-                            Clean and organized data.
-                        </p>
-
-                        <span class="project-arrow">
-                            ↗
-                        </span>
-
-                    </a>
-
-
-                    <!-- RELIABLE WORKFLOW -->
-                    <div class="mini-card workflow-card">
-
-                        <div class="workflow-icon">
-                            ✓
-                        </div>
-
-                        <h3>
-                            Reliable Workflow
-                        </h3>
-
-                        <p>
-                            Detail-oriented • Organized
-                        </p>
-
-                        <span class="project-arrow">
-                            ✓
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- RIGHT SIDE -->
-            <div class="hero-side">
-
-
-                <!-- FEATURED PROJECT -->
-                <div class="work-preview">
-
-                    <div class="preview-top">
-
-                        <span>MY WORK</span>
-
-                        <i></i>
-
-                    </div>
-
-
-                    <div class="preview-image">
-
-                        <img
-                            src="excel-preview.png"
-                            alt="Professional Data Entry Excel Sample">
-
-                    </div>
-
-
-                    <div class="preview-bottom">
-
-                        <div>
-
-                            <small>
-                                FEATURED PROJECT
-                            </small>
-
-                            <h3>
-                                Professional Data Entry
-                            </h3>
-
-                        </div>
+                        </a>
 
 
                         <a
-                            href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                            class="mini-card"
+                            href="Sample_Project_02_Web_Research.xlsx"
                             target="_blank"
-                            class="featured-arrow">
+                        >
 
-                            ↗
+                            <img
+                                src="excel-preview.png"
+                                alt="Web Research"
+                            >
+
+                            <div class="mini-card-info">
+
+                                <h4>Web Research</h4>
+
+                                <span>Research & Organization</span>
+
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            class="mini-card"
+                            href="Sample_Project_03_Data_Cleaning.xlsx"
+                            target="_blank"
+                        >
+
+                            <img
+                                src="data-cleaning-preview.png"
+                                alt="Data Cleaning"
+                            >
+
+                            <div class="mini-card-info">
+
+                                <h4>Data Cleaning</h4>
+
+                                <span>Data Organization</span>
+
+                            </div>
 
                         </a>
 
@@ -366,463 +1129,765 @@
 
                 </div>
 
+            </div>
 
-                <!-- STATS -->
-                <div class="stats">
 
-                    <div>
-                        <strong>3+</strong>
-                        <span>Core Skills</span>
+            <!-- RIGHT -->
+
+            <div class="hero-right">
+
+
+                <div class="featured">
+
+                    <div class="featured-image">
+
+                        <img
+                            src="excel-preview.png"
+                            alt="Featured Data Entry Project"
+                        >
+
                     </div>
 
-                    <div>
-                        <strong>10+</strong>
-                        <span>Creative Projects</span>
+                    <div class="featured-label">
+                        FEATURED PROJECT
                     </div>
 
-                    <div>
-                        <strong>100%</strong>
-                        <span>Commitment</span>
+                    <h2>
+                        Spreadsheet Data Entry
+                    </h2>
+
+                    <p>
+                        A sample spreadsheet project demonstrating organized,
+                        accurate, and clean data entry.
+                    </p>
+
+                    <button
+                        class="featured-button"
+                        data-popup="projects"
+                    >
+                        Explore Projects →
+                    </button>
+
+                </div>
+
+
+                <!-- TOOLS -->
+
+                <div class="tools-box">
+
+                    <div class="tools-title">
+                        TOOLS & PLATFORMS
+                    </div>
+
+                    <div class="tools-icons">
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="linkedin"
+                            title="LinkedIn"
+                        >
+                            <span class="tool-symbol linkedin-icon">
+                                in
+                            </span>
+                            <small>LinkedIn</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="gimp"
+                            title="GIMP"
+                        >
+                            <span class="tool-symbol gimp-icon">
+                                G
+                            </span>
+                            <small>GIMP</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="excel"
+                            title="Microsoft Excel"
+                        >
+                            <span class="tool-symbol excel-icon">
+                                X
+                            </span>
+                            <small>Excel</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="canva"
+                            title="Canva"
+                        >
+                            <span class="tool-symbol canva-icon">
+                                C
+                            </span>
+                            <small>Canva</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="capcut"
+                            title="CapCut"
+                        >
+                            <span class="tool-symbol capcut-icon">
+                                ▶
+                            </span>
+                            <small>CapCut</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="facebook"
+                            title="Facebook"
+                        >
+                            <span class="tool-symbol facebook-icon">
+                                f
+                            </span>
+                            <small>Facebook</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="tiktok"
+                            title="TikTok"
+                        >
+                            <span class="tool-symbol tiktok-icon">
+                                ♪
+                            </span>
+                            <small>TikTok</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="instagram"
+                            title="Instagram"
+                        >
+                            <span class="tool-symbol instagram-icon">
+                                ◎
+                            </span>
+                            <small>Instagram</small>
+                        </button>
+
+
+                        <button
+                            class="tool-icon"
+                            data-popup="claude"
+                            title="Claude"
+                        >
+                            <span class="tool-symbol claude-icon">
+                                ✦
+                            </span>
+                            <small>Claude</small>
+                        </button>
+
+
                     </div>
 
                 </div>
-<!-- TOOLS & PLATFORMS -->
-<div class="tools-box">
 
-    <div class="tools-title">
-        TOOLS & PLATFORMS
-    </div>
 
-    <div class="tools-badges">
+                <!-- STATS -->
 
-        <button class="tool-badge" data-popup="linkedin">
-            LinkedIn
-        </button>
+                <div class="stats">
 
-        <button class="tool-badge" data-popup="gimp">
-            GIMP
-        </button>
+                    <div class="stat">
+                        <strong>3+</strong>
+                        <span>CORE SERVICES</span>
+                    </div>
 
-        <button class="tool-badge" data-popup="excel">
-            Excel
-        </button>
+                    <div class="stat">
+                        <strong>3</strong>
+                        <span>DATA PROJECTS</span>
+                    </div>
 
-        <button class="tool-badge" data-popup="canva">
-            Canva
-        </button>
+                    <div class="stat">
+                        <strong>24/7</strong>
+                        <span>ONLINE SUPPORT</span>
+                    </div>
 
-        <button class="tool-badge" data-popup="capcut">
-            CapCut
-        </button>
+                </div>
 
-        <button class="tool-badge" data-popup="facebook">
-            Facebook
-        </button>
-
-        <button class="tool-badge" data-popup="tiktok">
-            TikTok
-        </button>
-
-        <button class="tool-badge" data-popup="instagram">
-            Instagram
-        </button>
-
-        <button class="tool-badge" data-popup="claude">
-            Claude
-        </button>
-
-    </div>
-
-</div>
             </div>
 
         </section>
 
     </main>
-<!-- ================= POPUP SYSTEM ================= -->
-
-<div class="popup-overlay" id="popupOverlay">
-
-    <div class="popup-box">
-
-        <button class="popup-close" id="popupClose">
-            ×
-        </button>
 
 
-        <!-- PROJECTS -->
-        <div class="popup-content" id="popup-projects">
+    <!-- =========================
+         POPUP SYSTEM
+    ========================= -->
 
-            <div class="popup-label">
-                MY PROJECTS
-            </div>
+    <div class="popup-overlay" id="popupOverlay">
 
-            <h2>
-                Data Entry Portfolio
-            </h2>
+        <div class="popup-box">
 
-            <p>
-                Here are my sample data entry projects demonstrating
-                accuracy, organization, research, and data cleaning.
-            </p>
+            <button class="popup-close" id="popupClose">
+                ×
+            </button>
 
-            <div class="popup-projects">
 
-                <a
-                    href="Sample_Project_01_Excel_Data_Entry.xlsx"
-                    target="_blank"
-                    class="popup-project">
+            <!-- HOME -->
 
-                    <span class="popup-number">01</span>
+            <div class="popup-content" id="popup-home">
 
-                    <div>
-                        <h3>Excel Data Entry</h3>
+                <h2>Welcome</h2>
+
+                <p>
+                    Welcome to my portfolio. I combine AI visual creation,
+                    video editing, graphic design, and data entry to provide
+                    practical digital support for businesses and creators.
+                </p>
+
+                <div class="popup-grid">
+
+                    <div class="popup-card">
+                        <h3>AI Visual Creation</h3>
                         <p>
-                            Spreadsheet data entry and organization.
+                            Creative AI-generated images and visual concepts.
                         </p>
                     </div>
 
-                    <strong>↗</strong>
+                    <div class="popup-card">
+                        <h3>Video Editing</h3>
+                        <p>
+                            Short-form and social media video editing.
+                        </p>
+                    </div>
 
-                </a>
+                    <div class="popup-card">
+                        <h3>Data Entry</h3>
+                        <p>
+                            Accurate data entry and spreadsheet organization.
+                        </p>
+                    </div>
 
-
-                <a
-                    href="Sample_Project_02_Web_Research.xlsx"
-                    target="_blank"
-                    class="popup-project">
-
-                    <span class="popup-number">02</span>
-
-                    <div>
+                    <div class="popup-card">
                         <h3>Web Research</h3>
                         <p>
-                            Online research and information collection.
+                            Organized research and information gathering.
                         </p>
                     </div>
 
-                    <strong>↗</strong>
+                </div>
 
-                </a>
+            </div>
+
+
+            <!-- PROJECTS -->
+
+            <div class="popup-content" id="popup-projects">
+
+                <h2>My Projects</h2>
+
+                <p>
+                    Sample projects demonstrating my data entry,
+                    spreadsheet, web research, and data cleaning skills.
+                </p>
+
+
+                <div class="popup-project">
+
+                    <img
+                        src="excel-preview.png"
+                        alt="Excel Data Entry Project"
+                    >
+
+                    <div class="popup-project-info">
+
+                        <h3>Excel Data Entry</h3>
+
+                        <p>
+                            Sample spreadsheet demonstrating organized
+                            and accurate data entry.
+                        </p>
+
+                        <a
+                            class="file-button"
+                            href="Sample_Project_01_Excel_Data_Entry.xlsx"
+                            target="_blank"
+                        >
+                            Open Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="popup-project">
+
+                    <img
+                        src="excel-preview.png"
+                        alt="Web Research Project"
+                    >
+
+                    <div class="popup-project-info">
+
+                        <h3>Web Research</h3>
+
+                        <p>
+                            Sample web research project showing structured
+                            information collection.
+                        </p>
+
+                        <a
+                            class="file-button"
+                            href="Sample_Project_02_Web_Research.xlsx"
+                            target="_blank"
+                        >
+                            Open Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="popup-project">
+
+                    <img
+                        src="data-cleaning-preview.png"
+                        alt="Data Cleaning Project"
+                    >
+
+                    <div class="popup-project-info">
+
+                        <h3>Data Cleaning</h3>
+
+                        <p>
+                            Sample project demonstrating organized,
+                            cleaned, and structured information.
+                        </p>
+
+                        <a
+                            class="file-button"
+                            href="Sample_Project_03_Data_Cleaning.xlsx"
+                            target="_blank"
+                        >
+                            Open Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div class="popup-content" id="popup-skills">
+
+                <h2>Skills & Expertise</h2>
+
+                <p>
+                    My skills combine creative visual work with organized
+                    digital support.
+                </p>
+
+
+                <div class="skill-list">
+
+                    <div class="skill">
+                        <h3>AI Image Generation</h3>
+                        <p>
+                            Creating creative and realistic AI-generated visuals.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>AI Video Creation</h3>
+                        <p>
+                            Creating engaging AI-assisted video concepts.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Video Editing</h3>
+                        <p>
+                            Editing short-form videos and social media content.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Graphic Design</h3>
+                        <p>
+                            Creating clean and modern visual designs.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Data Entry</h3>
+                        <p>
+                            Accurate data input and spreadsheet management.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Data Cleaning</h3>
+                        <p>
+                            Organizing and cleaning spreadsheet information.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Web Research</h3>
+                        <p>
+                            Finding and organizing relevant online information.
+                        </p>
+                    </div>
+
+                    <div class="skill">
+                        <h3>Spreadsheet Management</h3>
+                        <p>
+                            Working with Excel and Google Sheets.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="popup-content" id="popup-services">
+
+                <h2>Services</h2>
+
+                <p>
+                    Practical creative and administrative services for
+                    businesses, brands, and online projects.
+                </p>
+
+
+                <div class="service-popup-card">
+
+                    <h3>✦ AI Visual Creation</h3>
+
+                    <p>
+                        AI-generated product visuals, creative concepts,
+                        promotional graphics, social media images,
+                        and visual content.
+                    </p>
+
+                </div>
+
+
+                <div class="service-popup-card">
+
+                    <h3>▶ Video Editing</h3>
+
+                    <p>
+                        Short-form video editing, social media videos,
+                        promotional clips, AI-assisted video content,
+                        and simple visual storytelling.
+                    </p>
+
+                </div>
+
+
+                <div class="service-popup-card">
+
+                    <h3>▤ Data Entry & Research</h3>
+
+                    <p>
+                        Data entry, data cleaning, web research,
+                        spreadsheet organization, and information management.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="Sample_Project_03_Data_Cleaning.xlsx"
-                    target="_blank"
-                    class="popup-project">
-
-                    <span class="popup-number">03</span>
-
-                    <div>
-                        <h3>Data Cleaning</h3>
-                        <p>
-                            Cleaning, formatting, and organizing data.
-                        </p>
-                    </div>
-
-                    <strong>↗</strong>
-
+                    class="popup-contact-button"
+                    href="mailto:ronnelpcaingat89@gmail.com?subject=Service%20Inquiry%20-%20Ronnel%20Caingat"
+                >
+                    Contact Me →
                 </a>
 
             </div>
 
-        </div>
 
+            <!-- LINKEDIN -->
 
-        <!-- SKILLS -->
-        <div class="popup-content" id="popup-skills">
+            <div class="popup-content" id="popup-linkedin">
 
-            <div class="popup-label">
-                MY SKILLS
-            </div>
-
-            <h2>
-                Skills & Expertise
-            </h2>
-
-            <p>
-                A combination of creative, technical, and organizational
-                skills for digital freelance projects.
-            </p>
-
-            <div class="skill-list">
-
-                <span>AI Image Generation</span>
-                <span>AI Visual Creation</span>
-                <span>AI Content Creation</span>
-                <span>Graphic Design</span>
-                <span>Video Editing</span>
-                <span>AI Video Generation</span>
-                <span>Data Entry</span>
-                <span>Data Cleaning</span>
-                <span>Data Research</span>
-                <span>Web Research</span>
-                <span>Spreadsheet Management</span>
-                <span>Attention to Detail</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- SERVICES -->
-        <div class="popup-content" id="popup-services">
-
-            <div class="popup-label">
-                MY SERVICES
-            </div>
-
-            <h2>
-                What I Can Help With
-            </h2>
-
-            <div class="service-popup-list">
-
-                <div>
-                    <b>✦ AI Visual Creation</b>
-                    <p>
-                        AI-generated images, creative concepts,
-                        product visuals, and social media content.
-                    </p>
+                <div class="tool-popup-icon linkedin-icon">
+                    in
                 </div>
 
-                <div>
-                    <b>▶ Video Editing</b>
-                    <p>
-                        Short-form videos, social media content,
-                        promotional videos, and AI video projects.
-                    </p>
-                </div>
+                <h2>LinkedIn</h2>
 
-                <div>
-                    <b>▤ Data Entry</b>
-                    <p>
-                        Accurate data entry, spreadsheet organization,
-                        data cleaning, and web research.
-                    </p>
-                </div>
+                <p>
+                    Professional networking and freelance profile platform.
+                    I can use LinkedIn to connect with businesses,
+                    professionals, and potential clients.
+                </p>
 
             </div>
 
-            <a
-                href="mailto:ronnelpcaingat89@gmail.com?subject=Project%20Proposal%20-%20Ronnel%20Caingat"
-                class="popup-contact">
 
-                Discuss a Project →
+            <!-- GIMP -->
 
-            </a>
+            <div class="popup-content" id="popup-gimp">
 
-        </div>
+                <div class="tool-popup-icon gimp-icon">
+                    G
+                </div>
 
+                <h2>GIMP</h2>
 
-        <!-- TOOLS INFORMATION -->
+                <p>
+                    Image editing and graphic design software used for
+                    creating and editing visual content.
+                </p>
 
-        <div class="popup-content" id="popup-linkedin">
-
-            <div class="popup-label">PLATFORM</div>
-
-            <h2>LinkedIn</h2>
-
-            <p>
-                Professional networking and freelance presence.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="popup-content" id="popup-gimp">
+            <!-- EXCEL -->
 
-            <div class="popup-label">DESIGN TOOL</div>
+            <div class="popup-content" id="popup-excel">
 
-            <h2>GIMP</h2>
+                <div class="tool-popup-icon excel-icon">
+                    X
+                </div>
 
-            <p>
-                Image editing and graphic design work.
-            </p>
+                <h2>Microsoft Excel</h2>
 
-        </div>
+                <p>
+                    Spreadsheet software used for data entry,
+                    organization, cleaning, sorting, and basic analysis.
+                </p>
 
-
-        <div class="popup-content" id="popup-excel">
-
-            <div class="popup-label">DATA TOOL</div>
-
-            <h2>Microsoft Excel</h2>
-
-            <p>
-                Spreadsheet data entry, organization,
-                formatting, and data cleaning.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="popup-content" id="popup-canva">
+            <!-- CANVA -->
 
-            <div class="popup-label">DESIGN TOOL</div>
+            <div class="popup-content" id="popup-canva">
 
-            <h2>Canva</h2>
+                <div class="tool-popup-icon canva-icon">
+                    C
+                </div>
 
-            <p>
-                Social media graphics, presentations,
-                promotional designs, and visual content.
-            </p>
+                <h2>Canva</h2>
 
-        </div>
+                <p>
+                    Design platform used for social media graphics,
+                    presentations, promotional visuals, and creative content.
+                </p>
 
-
-        <div class="popup-content" id="popup-capcut">
-
-            <div class="popup-label">VIDEO TOOL</div>
-
-            <h2>CapCut</h2>
-
-            <p>
-                Short-form video editing and social media content.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="popup-content" id="popup-facebook">
+            <!-- CAPCUT -->
 
-            <div class="popup-label">SOCIAL PLATFORM</div>
+            <div class="popup-content" id="popup-capcut">
 
-            <h2>Facebook</h2>
+                <div class="tool-popup-icon capcut-icon">
+                    ▶
+                </div>
 
-            <p>
-                Social media content and visual communication.
-            </p>
+                <h2>CapCut</h2>
 
-        </div>
+                <p>
+                    Video editing platform used for short-form videos,
+                    social media content, transitions, captions, and effects.
+                </p>
 
-
-        <div class="popup-content" id="popup-tiktok">
-
-            <div class="popup-label">SOCIAL PLATFORM</div>
-
-            <h2>TikTok</h2>
-
-            <p>
-                Short-form video content and creative visuals.
-            </p>
-
-        </div>
+            </div>
 
 
-        <div class="popup-content" id="popup-instagram">
+            <!-- FACEBOOK -->
 
-            <div class="popup-label">SOCIAL PLATFORM</div>
+            <div class="popup-content" id="popup-facebook">
 
-            <h2>Instagram</h2>
+                <div class="tool-popup-icon facebook-icon">
+                    f
+                </div>
 
-            <p>
-                Visual content, reels, graphics, and promotional
-                social media content.
-            </p>
+                <h2>Facebook</h2>
 
-        </div>
+                <p>
+                    Social media platform useful for content publishing,
+                    business pages, audience engagement, and promotion.
+                </p>
+
+            </div>
 
 
-        <div class="popup-content" id="popup-claude">
+            <!-- TIKTOK -->
 
-            <div class="popup-label">AI TOOL</div>
+            <div class="popup-content" id="popup-tiktok">
 
-            <h2>Claude</h2>
+                <div class="tool-popup-icon tiktok-icon">
+                    ♪
+                </div>
 
-            <p>
-                AI-assisted content creation, research,
-                writing, and workflow support.
-            </p>
+                <h2>TikTok</h2>
+
+                <p>
+                    Short-form video platform useful for creative content,
+                    audience engagement, and social media marketing.
+                </p>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="popup-content" id="popup-instagram">
+
+                <div class="tool-popup-icon instagram-icon">
+                    ◎
+                </div>
+
+                <h2>Instagram</h2>
+
+                <p>
+                    Visual social media platform used for images,
+                    reels, branding, and promotional content.
+                </p>
+
+            </div>
+
+
+            <!-- CLAUDE -->
+
+            <div class="popup-content" id="popup-claude">
+
+                <div class="tool-popup-icon claude-icon">
+                    ✦
+                </div>
+
+                <h2>Claude</h2>
+
+                <p>
+                    AI assistant used to support writing, ideas,
+                    research, content development, and creative workflows.
+                </p>
+
+            </div>
+
 
         </div>
 
     </div>
 
-</div>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
     <script>
 
-const popupOverlay = document.getElementById("popupOverlay");
-const popupClose = document.getElementById("popupClose");
+        const popupOverlay = document.getElementById("popupOverlay");
+        const popupClose = document.getElementById("popupClose");
 
-const popupButtons = document.querySelectorAll("[data-popup]");
-const popupContents = document.querySelectorAll(".popup-content");
+        const popupContents =
+            document.querySelectorAll(".popup-content");
 
-
-function openPopup(name) {
-
-    if (name === "home") {
-        return;
-    }
-
-    popupContents.forEach(function(content) {
-        content.classList.remove("active");
-    });
-
-    const selectedPopup = document.getElementById("popup-" + name);
-
-    if (selectedPopup) {
-
-        selectedPopup.classList.add("active");
-
-        popupOverlay.classList.add("show");
-
-    }
-
-}
+        const popupTriggers =
+            document.querySelectorAll("[data-popup]");
 
 
-function closePopup() {
+        function openPopup(name) {
 
-    popupOverlay.classList.remove("show");
+            popupContents.forEach(function(content) {
+                content.classList.remove("active");
+            });
 
-    popupContents.forEach(function(content) {
-        content.classList.remove("active");
-    });
+            const selectedPopup =
+                document.getElementById("popup-" + name);
 
-}
+            if (selectedPopup) {
 
+                selectedPopup.classList.add("active");
 
-popupButtons.forEach(function(button) {
+                popupOverlay.classList.add("show");
 
-    button.addEventListener("click", function(event) {
+            }
 
-        const popupName = button.getAttribute("data-popup");
-
-        if (popupName !== "home") {
-            event.preventDefault();
-            openPopup(popupName);
         }
 
-    });
 
-});
+        function closePopup() {
 
+            popupOverlay.classList.remove("show");
 
-popupClose.addEventListener("click", function() {
+            popupContents.forEach(function(content) {
+                content.classList.remove("active");
+            });
 
-    closePopup();
-
-});
-
-
-popupOverlay.addEventListener("click", function(event) {
-
-    if (event.target === popupOverlay) {
-        closePopup();
-    }
-
-});
+        }
 
 
-document.addEventListener("keydown", function(event) {
+        popupTriggers.forEach(function(trigger) {
 
-    if (event.key === "Escape") {
-        closePopup();
-    }
+            trigger.addEventListener("click", function(event) {
 
-});
+                event.preventDefault();
 
-</script>
+                const popupName =
+                    trigger.getAttribute("data-popup");
+
+                if (popupName === "home") {
+
+                    closePopup();
+
+                    return;
+
+                }
+
+                openPopup(popupName);
+
+            });
+
+        });
+
+
+        popupClose.addEventListener("click", function() {
+
+            closePopup();
+
+        });
+
+
+        popupOverlay.addEventListener("click", function(event) {
+
+            if (event.target === popupOverlay) {
+
+                closePopup();
+
+            }
+
+        });
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                closePopup();
+
+            }
+
+        });
+
+
+    </script>
+
 </body>
 </html>
