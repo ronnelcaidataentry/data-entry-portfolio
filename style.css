@@ -749,3 +749,87 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+<script>
+
+const popupOverlay = document.getElementById("popupOverlay");
+const popupClose = document.getElementById("popupClose");
+
+const popupButtons = document.querySelectorAll("[data-popup]");
+const popupContents = document.querySelectorAll(".popup-content");
+
+
+function openPopup(name) {
+
+    if (name === "home") {
+        return;
+    }
+
+    popupContents.forEach(function(content) {
+        content.classList.remove("active");
+    });
+
+    const selectedPopup = document.getElementById("popup-" + name);
+
+    if (selectedPopup) {
+
+        selectedPopup.classList.add("active");
+
+        popupOverlay.classList.add("show");
+
+    }
+
+}
+
+
+function closePopup() {
+
+    popupOverlay.classList.remove("show");
+
+    popupContents.forEach(function(content) {
+        content.classList.remove("active");
+    });
+
+}
+
+
+popupButtons.forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+
+        const popupName = button.getAttribute("data-popup");
+
+        if (popupName !== "home") {
+            event.preventDefault();
+            openPopup(popupName);
+        }
+
+    });
+
+});
+
+
+popupClose.addEventListener("click", function() {
+
+    closePopup();
+
+});
+
+
+popupOverlay.addEventListener("click", function(event) {
+
+    if (event.target === popupOverlay) {
+        closePopup();
+    }
+
+});
+
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closePopup();
+    }
+
+});
+
+</script>
